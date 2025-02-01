@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("kerong")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ebe49a771907d4fede97947679bbb1e720121795")]
 [assembly: System.Reflection.AssemblyProductAttribute("kerong")]
 [assembly: System.Reflection.AssemblyTitleAttribute("kerong")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
