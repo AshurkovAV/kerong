@@ -1,0 +1,14 @@
+C:\Users\User\kerong\bin\Debug\net8.0\kerong.exe
+C:\Users\User\kerong\bin\Debug\net8.0\kerong.deps.json
+C:\Users\User\kerong\bin\Debug\net8.0\kerong.runtimeconfig.json
+C:\Users\User\kerong\bin\Debug\net8.0\kerong.dll
+C:\Users\User\kerong\bin\Debug\net8.0\kerong.pdb
+C:\Users\User\kerong\obj\Debug\net8.0\kerong.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\kerong\obj\Debug\net8.0\kerong.AssemblyInfoInputs.cache
+C:\Users\User\kerong\obj\Debug\net8.0\kerong.AssemblyInfo.cs
+C:\Users\User\kerong\obj\Debug\net8.0\kerong.csproj.CoreCompileInputs.cache
+C:\Users\User\kerong\obj\Debug\net8.0\kerong.dll
+C:\Users\User\kerong\obj\Debug\net8.0\refint\kerong.dll
+C:\Users\User\kerong\obj\Debug\net8.0\kerong.pdb
+C:\Users\User\kerong\obj\Debug\net8.0\kerong.genruntimeconfig.cache
+C:\Users\User\kerong\obj\Debug\net8.0\ref\kerong.dll
