@@ -7,7 +7,7 @@ CREATE TABLE kerong.dbo.bu_board (
 			description  	    nvarchar(255)	NOT NULL DEFAULT 'Плата',
 			ip   				nvarchar(36)	NULL,
 			port                int             NULL,
-			boardType			nvarchar(100) 	NOT NULL CHECK (boardType IN ('CU_16', 'CU_48', 'CU_48b', 'SCU')),--ТипKR-CUплаты интеграции
+			boardType			nvarchar(100) 	NOT NULL CHECK (boardType IN ('CU_16', 'CU_48', 'CU_48b', 'SCU')),--Тип KR-CU платы интеграции
 			zone_active			bit				NOT NULL DEFAULT 1,
 			model				nvarchar(255)	NULL,--Тип BU платы
 			
