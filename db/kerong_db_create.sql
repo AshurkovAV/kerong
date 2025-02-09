@@ -30,11 +30,11 @@ BEGIN TRANSACTION
             current_version         nvarchar(255)   NOT NULL,
             
 			/*service fields*/
-            active              bit             NOT NULL DEFAULT 1,
-            created_at          datetime        NOT NULL DEFAULT getdate(),
-            created_by          nvarchar(64)    NOT NULL DEFAULT 'system',
-            updated_at          datetime        NOT NULL DEFAULT getdate(),
-            updated_by          nvarchar(64)    NOT NULL DEFAULT 'system'
+            active                  bit             NOT NULL DEFAULT 1,
+            created_at              datetime        NOT NULL DEFAULT getdate(),
+            created_by              nvarchar(64)    NOT NULL DEFAULT 'system',
+            updated_at              datetime        NOT NULL DEFAULT getdate(),
+            updated_by              nvarchar(64)    NOT NULL DEFAULT 'system'
         ) ON [PRIMARY]
 
     ALTER TABLE kerong.dbo.product_version  ADD CONSTRAINT uq__product_version   UNIQUE (entity_code, current_version)
@@ -57,12 +57,13 @@ BEGIN TRANSACTION
             base_version            nvarchar(32)    NOT NULL,
             result_version          nvarchar(32)    NOT NULL,
             result_status           nvarchar(12)    NOT NULL CHECK (result_status IN ('UP', 'DOWN')),
-            /*service fields*/
-            active              bit             NOT NULL DEFAULT 1,
-            created_at          datetime        NOT NULL DEFAULT getdate(),
-            created_by          nvarchar(64)    NOT NULL DEFAULT 'system',
-            updated_at          datetime        NOT NULL DEFAULT getdate(),
-            updated_by          nvarchar(64)    NOT NULL DEFAULT 'system'
+           
+		   /*service fields*/
+            active                  bit             NOT NULL DEFAULT 1,
+            created_at              datetime        NOT NULL DEFAULT getdate(),
+            created_by              nvarchar(64)    NOT NULL DEFAULT 'system',
+            updated_at              datetime        NOT NULL DEFAULT getdate(),
+            updated_by              nvarchar(64)    NOT NULL DEFAULT 'system'
         ) ON [PRIMARY]
 
     ALTER TABLE kerong.dbo.updates    ADD CONSTRAINT pk__updates    PRIMARY KEY (id)
