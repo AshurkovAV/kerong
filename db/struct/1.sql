@@ -20,6 +20,25 @@ CREATE TABLE kerong.dbo.bu_board (
 	
 );
 
+if OBJECT_ID('kerong.dbo.cu_board') is not null drop table kerong.dbo.cu_board
+
+CREATE TABLE kerong.dbo.cu_board (
+	        id                  int				IDENTITY(1,1) NOT FOR REPLICATION NOT NULL,
+			chainNumber         int null, -- Номер в цепи
+			name			    nvarchar(255)	NOT NULL DEFAULT 'Наименование платы', -- Наименование платы.
+			description  	    nvarchar(255)	NOT NULL DEFAULT 'Описание',
+			boardType			nvarchar(100) 	NOT NULL CHECK (boardType IN ('CU_16', 'CU_48', 'CU_48b', 'SCU')),--Тип KR-CU платы интеграции
+			bu_board_id			int null,			
+			
+			/*service fields*/
+			active				bit				NOT NULL DEFAULT 1,
+			created_at			datetime		NOT NULL DEFAULT getdate(),
+			created_by			nvarchar(64)	NOT NULL DEFAULT 'system',
+			updated_at			datetime		NOT NULL DEFAULT getdate(),
+			updated_by			nvarchar(64)	NOT NULL DEFAULT 'system'
+	
+);
+
 if OBJECT_ID('kerong.dbo.zone') is not null drop table kerong.dbo.zone
 CREATE TABLE kerong.dbo.zone (
 	        id                          int				IDENTITY(1,1) NOT FOR REPLICATION NOT NULL,			
