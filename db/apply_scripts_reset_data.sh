@@ -1,9 +1,9 @@
 #!/bin/bash
-server=OMSIT\\SQLEXPRESS
+server=127.0.0.1
 user=sa
 pwd=Pi31415926
 sqlcmd_file=sqlcmd
-databese=kerong
+databese=san_administration
 
 if [ -f /opt/mssql-tools/bin/sqlcmd ]; then
     server=localhost
@@ -13,14 +13,11 @@ fi
 echo "Interpreter: [$sqlcmd_file]"
 echo "Server: [$server]"
 
-scripts_drop_contrains="$(find ./ -maxdepth 1 -type f -iname 'kerong_db_drop_constraints.sql' | sort -t 't' -g -k 3)"
-scripts_base="$(find ./ -maxdepth 1 -type f -iname 'kerong_db_create.sql' | sort -t 't' -g -k 3)"
-scripts_struct="$(find ./struct -type f -iname '*.sql' | sort -t 't' -g -k 3)"
+scripts_base="$(find ./ -maxdepth 1 -type f -iname 'kerong_db_drop_data.sql' | sort -t 't' -g -k 3)"
 scripts_data="$(find ./data -type f -iname '*.sql' | sort -t 't' -g -k 3)"
-scripts_updates="$(find ./updates -type f -iname '0*.sql' | sort -t 't' -g -k 3)"
 scripts_fixtures="$(find ./fixtures -type f -iname '*.sql' | sort -t 't' -g -k 3)"
 
-scripts_list="$scripts_drop_contrains $scripts_base $scripts_struct $scripts_updates $scripts_data $scripts_fixtures"
+scripts_list="$scripts_base $scripts_struct $scripts_updates $scripts_data $scripts_fixtures"
 
 for sql_script in $scripts_list; do
     echo ""
