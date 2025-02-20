@@ -3,7 +3,7 @@
 -- PRINT CHAR(10) + 'data:' + CHAR(10) + CHAR(9) + 'catalog_board_type';
 INSERT INTO
     kerong.dbo.catalog_board_type
-    ([id],[r_type_char],[r_name])
+    ([id],[r_type_char])
 VALUES
     (1,   'CU_16'),
     (2,   'CU_48'),
